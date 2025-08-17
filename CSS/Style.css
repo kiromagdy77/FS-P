@@ -194,6 +194,7 @@ header button:hover{
     align-items: center;
     width: 75%;
     gap: 15px;
+    flex-wrap: wrap;
 }
 .project-card{
     width: 300px;
@@ -255,12 +256,13 @@ header button:hover{
     margin: 0 auto;
     width: 100%;
     gap: 15px;
+    flex-wrap: wrap;
 }
 .skills-container button{
     border: none;
     padding: 8px 18px;
     font-size: 16px;
-    margin: 0px 5px 0px 5px;
+    margin: 5px;
     border-radius: 5px;
     background-color: #29382E;
     color: var(--text-color);
@@ -455,6 +457,7 @@ header p{ font-size: clamp(16px, 2.5vw, 22px); }
     nav h1{ font-size: 20px; }
     .project-card{ width: 100%; }
     .contact-container, .contact-form{ width: 100%; }
+
     .skills button{ margin-bottom: 10px; }
     .contact-form form input{ align-self: center; }
     .contact-form form textarea{ align-self: center; }
