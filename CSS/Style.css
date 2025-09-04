@@ -432,7 +432,7 @@ footer aside{
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s ease;
-    z-index: 1000;
+    z-index: 9999;
   }
   
   #wifi-loader svg {
@@ -443,7 +443,7 @@ footer aside{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 10000;
   }
 
   #wifi-loader.hidden{
