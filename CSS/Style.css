@@ -169,7 +169,7 @@ header button:hover{
     width: 75%;
     height: auto;
     margin: 0 auto;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 .about h2{
     font-size: 40px;
@@ -185,8 +185,6 @@ header button:hover{
     width: 75%;
     height: auto;
     margin: 0 auto;
-    margin-top: 80px;
-    margin-bottom: 80px;
 }
 .projects-container{
     display: flex;
@@ -202,7 +200,7 @@ header button:hover{
     transition: 0.3s ease-in-out;
 }
 .project-card:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 .project-card a{
     text-decoration: none;
@@ -212,6 +210,34 @@ header button:hover{
     height: 170px;
     border-radius: 15px;
     object-fit: cover;
+}
+.project-card{
+  perspective: 1000px;
+}
+.project-card a{
+    position: relative;
+    display: block;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+.project-card a > div:first-child{
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform 0.8s ease;
+}
+.project-card .project-card-back{
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform 0.8s ease;
+}
+.project-card:hover a > div:first-child{
+   transform: rotateY(180deg); 
+  }
+.project-card:hover .project-card-back{ 
+  transform: rotateY(0deg); 
 }
 .more-projects{
     width: 200px;
@@ -229,21 +255,23 @@ header button:hover{
 .project-card h3{
     font-size: 20px;
     color: var(--text-color);
-    margin: 0px;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin: 10px 0px 5px 10px;
 }
 .project-card p{
     font-size: 16px;
     color: #afafaf;
     margin: 0px;
 }
+.project-card-back p span{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--sec-color);
+}
 /*-----------------------------*/
 .skills{
     width: 75%;
     height: auto;
     margin: 0 auto;
-    margin-top: 80px;
 }
 .skills h2{
     font-size: 40px;
@@ -530,7 +558,6 @@ footer aside{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-transform: lowercase;
     font-weight: 500;
     font-size: 18px;
     letter-spacing: 0.2px;
