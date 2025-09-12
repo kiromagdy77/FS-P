@@ -68,3 +68,8 @@ if(contactForm){
         }
     });
 }
+
+// Dark mode
+function toggleDarkMode(){
+    document.body.classList.toggle('light-mode');
+}

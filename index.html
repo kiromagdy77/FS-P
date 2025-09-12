@@ -40,6 +40,14 @@
                 <a href="CV/KM-CV.pdf" download target="_blank"><button class="download-resume">Download Resume</button></a>  
         </div>
     </nav>
+    <aside class="toggle-aside">
+        <div class="toggle-switch">
+            <label class="switch-label">
+              <input type="checkbox" class="checkbox" onclick="toggleDarkMode()">
+              <span class="slider"></span>
+            </label>
+          </div>  
+    </aside>
     <header id="about">
         <div class="header-img-container">
             <img src="Materials/mainP2.png" alt="KM-Profile">
@@ -72,7 +80,7 @@
     <section class="projects" id="projects">
         <h2>Projects</h2>
         <div class="projects-container">
-            <div class="project-card">
+            <div class="project-card" id="project-card">
                 <a href="https://kiromagdy77.github.io/word-of-the.lord/" target="_blank">
                     <div>
                         <img src="Materials/Wordofthelord.svg" alt="Word of the Lord">
@@ -90,7 +98,7 @@
                     </div>
                 </a>
             </div>
-            <div class="project-card">
+            <div class="project-card" id="project-card">
                 <a href="https://kiromagdy77.github.io/Div-Store/" target="_blank">
                     <div>
                         <img src="Materials/DivStore.svg" alt="Div Store">
@@ -108,7 +116,7 @@
                     </div>
                 </a>
             </div>
-            <div class="project-card">
+            <div class="project-card" id="project-card">
                 <a href="https://kiromagdy77.github.io/Code-Crate/" target="_blank">
                     <div>
                         <img src="Materials/CodeCrate.svg" alt="Code Crate">

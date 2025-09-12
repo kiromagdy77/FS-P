@@ -5,8 +5,18 @@
     --sec-color: #38E07A;
     --sec-hover-color: #28a75f;
     --text-color: #fff;
+    --skills-btns-color: #29382E;
+    --skills-btns-color-text: #fff;
+    --test: #ff00b7;
 }
-
+.light-mode{
+    --bg-color: #fff;
+    --sec-color: #38E07A;
+    --sec-hover-color: #28a75f;
+    --text-color: #000;
+    --skills-btns-color: #424242;
+    --skills-btns-color-text: #fff;
+}
 body{
     background-color: var(--bg-color);
     font-family: 'DM Sans', sans-serif;
@@ -98,6 +108,68 @@ nav h1:hover {
     background-color: var(--sec-hover-color);
 }
 /*-----------------------------*/
+.toggle-aside{
+display: flex;
+justify-content: end;
+align-items: center;
+width: 99%;
+height: 100%;
+margin-top: 90px;
+}
+.toggle-switch {
+  position: relative;
+  width: 70px;
+  height: 50px;
+  --light: var(--bg-color);
+  --dark: #28292c;
+}
+.switch-label {
+  position: absolute;
+  width: 100%;
+  height: 33px;
+  background-color: var(--dark);
+  border-radius: 25px;
+  cursor: pointer;
+  border: 3px solid var(--dark);
+}
+.checkbox {
+  position: absolute;
+  display: none;
+}
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.checkbox:checked ~ .slider {
+  background-color: var(--light);
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+  box-shadow: inset 12px -4px 0px 0px var(--light);
+  background-color: var(--dark);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.checkbox:checked ~ .slider::before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+  background-color: var(--text-color); 
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/*-----------------------------*/
 header{
     display: flex;
     justify-content: start;
@@ -105,7 +177,7 @@ header{
     width: 75%;
     height: auto;
     margin: 0 auto;
-    margin-top: 120px;
+    margin-top: 5px;
     gap: 40px;
 }
 .header-img-container{
@@ -292,8 +364,8 @@ header button:hover{
     font-size: 16px;
     margin: 5px;
     border-radius: 5px;
-    background-color: #29382E;
-    color: var(--text-color);
+    background-color: var(--skills-btns-color);
+    color: var(--skills-btns-color-text);
 }
 /*-----------------------------*/
 .contact{
@@ -383,27 +455,28 @@ header button:hover{
 }
 .contact-form form input{
     padding: 8px 18px;
-    width: 92%;
+    width: 100%;
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #29382E;
-    color: var(--text-color);
+    background-color: var(--skills-btns-color);
+    color: var(--skills-btns-color-text);
     margin-bottom: 10px;
 }
 .contact-form form textarea{
+  font-family: 'DM Sans', sans-serif;
     padding: 8px 18px;
-    width: 92%;
+    width: 100%;
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #29382E;
-    color: var(--text-color);
+    background-color: var(--skills-btns-color);
+    color: var(--skills-btns-color-text);
     margin-bottom: 10px;
 }
 .contact-form button{
     padding: 8px 18px;
-    width: 98%;
+    width: 100%;
     font-size: 16px;
     border-radius: 5px;
     background-color: var(--sec-color);
@@ -426,12 +499,12 @@ header button:hover{
 .form-status.error{ color: #ff6b6b; }
 /*-------------------------------*/
 footer aside{
-    position: fixed;
-    bottom: 0;
-    left: 1%;
-    width: 100%;
-    height: 50px;
-    z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  left: 1%;
+  width: 100%;
+  height: 50px;
+  z-index: 1000;
 }
 .footer-text{
     display: flex;
